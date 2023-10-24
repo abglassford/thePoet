@@ -3,16 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <title>Poetry Slammer</title>
 </head>
 <body>
-    <div>
-        <label for="authorInput">Author</label>
-        <input id="authorInput" type="text">
-        <label for="titleInput">Title</label>
-        <input id="titleInput" type="text">
-        <hr>
-        <button id="submitButton" >Send Request</button>
+    <div class="mainContainer">
+        <div class="innerContainer">
+            <span class="inputGroup">
+                <label for="inputField">Search By:</label>
+                <select name="predicate" id="predicateSelect">
+                    <option value="author" selected>Author</option>
+                    <option value="title">Title</option>
+                </select>
+            </span>
+            <span class="inputGroup">
+                <label for="searchTerm">Search Term:</label>
+                <input name="searchTerm" id="searchTermInput" type="text">
+            </span>
+            <button id="submitButton">Send Request</button>
+            <p id="logData"></p>
+        </div>
     </div>
 </body>
 <script type="module" src="./index.js"></script>
