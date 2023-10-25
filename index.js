@@ -41,7 +41,6 @@ class PoetryGetter {
  
     }
 
-
     getPredicates() {
         let predicateCheckboxes = document.querySelectorAll('input[name="predicate"]');
         let checkedPredicates = [];
@@ -74,7 +73,13 @@ class PoetryGetter {
         let predicateArg = this.getPredicates();
         let searchTermArg = this.getSearchTerms() 
 
-        if (predicateArg === "" || searchTermArg === "") return;
+        if (predicateArg === "" || searchTermArg === "") 
+        {
+            let logDataSection = document.getElementById('logData')
+            logDataSection.innerText = "Please enter search criteria";
+
+            return;
+        }
 
         let url = `https://poetrydb.org/${predicateArg}/${searchTermArg}/lines,title,author,linecount`;
 
