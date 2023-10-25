@@ -5,28 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <title>Poetry Slammer</title>
+    <title>Poemstaq</title>
 </head>
 
 <body>
     <div class="mainContainer">
         <div class="upperContainer">
-            <span class="inputGroup">
-                <label for="inputField">Search By:</label>
-                <select name="predicate" id="predicateSelect">
-                    <option value="author" selected>Author</option>
-                    <option value="title">Title</option>
-                </select>
-            </span>
-            <span class="inputGroup">
-                <label for="searchTerm">Search Term:</label>
-                <input name="searchTerm" id="searchTermInput" type="text">
-            </span>
+            <label for="inputField">Search By:</label>
+            <div class="inputRow">
+                <input type="checkbox" name="predicate" value="author" id="authorCheckbox" checked>Author</input>
+                <input name="term" id="authorVal" type="text">
+            </div>
+            <div class="inputRow">
+                <input type="checkbox" name="predicate" value="title" id="titleCheckbox">Title</input>
+                <input name="term" id="titleVal" type="text" disabled>
+            </div>
+            <div class="inputRow">
+                <input type="checkbox" name="predicate" value="lines" id="linesCheckbox">Lines</input>
+                <input name="term" id="linesVal" type="text" disabled>
+            </div>
+            <div class="inputRow">
+                <input type="checkbox" name="predicate" value="linecount" id="lineCountCheckbox">LineCount</input>
+                <input name="term" id="lineCountVal" type="number" disabled>
+            </div>
             <button id="submitButton">Send Request</button>
         </div>
         <div class="lowerContainer">
-            <label for="logSection">Log:</label>
-            <p name="logSection" id="logData"></p>
+            <div name="logSection" id="logData"></div>
         </div>
     </div>
 </body>

@@ -1,19 +1,33 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
 .mainContainer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow: hidden;
 }
 
 .upperContainer {
     width: 300px;
     display: flex;
     flex-direction: column;
+    padding: 4px;
 }
 
 .upperContainer > * {
     padding: 2px;
     margin: 2px;
+}
+
+.inputRow {
+    display: flex;
+    justify-content: space-between;
+
 }
 
 .inputGroup {
@@ -22,12 +36,22 @@
 }
 
 .lowerContainer {
-    padding-top: 10px;
+    max-height: 80vh;
+    overflow-y: scroll;
 }
 
 #logData {
     display: flex;
+    flex-direction: column;
     background-color: rgba(12, 12, 12, 0.2);
     min-height: 200px;
     min-width: 300px;
+}
+
+#logData > div {
+    margin: 5px;
+}
+
+#logData p {
+    margin: 2px;
 }
