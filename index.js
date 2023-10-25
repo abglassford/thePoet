@@ -1,8 +1,6 @@
 class PoetryGetter {
 
     constructor() {
-        console.log('Hello Poetry!');
-
         this.createListeners();
     }
 

@@ -1,0 +1,33 @@
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.upperContainer {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.upperContainer > * {
+    padding: 2px;
+    margin: 2px;
+}
+
+.inputGroup {
+    display: flex;
+    justify-content: space-between;
+}
+
+.lowerContainer {
+    padding-top: 10px;
+}
+
+#logData {
+    display: flex;
+    background-color: rgba(12, 12, 12, 0.2);
+    min-height: 200px;
+    min-width: 300px;
+}

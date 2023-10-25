@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <title>Poetry Slammer</title>
 </head>
+
 <body>
     <div class="mainContainer">
-        <div class="innerContainer">
+        <div class="upperContainer">
             <span class="inputGroup">
                 <label for="inputField">Search By:</label>
                 <select name="predicate" id="predicateSelect">
@@ -21,9 +23,13 @@
                 <input name="searchTerm" id="searchTermInput" type="text">
             </span>
             <button id="submitButton">Send Request</button>
-            <p id="logData"></p>
+        </div>
+        <div class="lowerContainer">
+            <label for="logSection">Log:</label>
+            <p name="logSection" id="logData"></p>
         </div>
     </div>
 </body>
 <script type="module" src="./index.js"></script>
+
 </html>
