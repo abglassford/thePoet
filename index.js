@@ -71,15 +71,12 @@ class PoetryGetter {
     }
 
     async getPoetry() {
-        // let predicateArg = document.getElementById("predicateSelect").value
-        // let searchTermArg = document.getElementById('searchTermInput').value;
         let predicateArg = this.getPredicates();
         let searchTermArg = this.getSearchTerms() 
 
-
         if (predicateArg === "" || searchTermArg === "") return;
 
-        let url = `${this.baseUrl}/${predicateArg}/${searchTermArg}/lines,title,author,linecount`;
+        let url = `https://poetrydb.org/${predicateArg}/${searchTermArg}/lines,title,author,linecount`;
 
         try {
             const response = await fetch(url);
@@ -135,14 +132,9 @@ class PoetryGetter {
                 child = logDataSection.lastElementChild;
             }
         }
-
         logDataSection.innerText = '';
-
     }
-
-    baseUrl = "https://poetrydb.org";
 }
-
 
 
 let poetryGetter = new PoetryGetter;
